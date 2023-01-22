@@ -1,0 +1,266 @@
+<section class="my-container" style="padding-top: 0">
+  <div class="hero-bg">
+    <div class="hero-text">
+      <h1>
+        Seeking Wellbeing? <br />
+        You’re in the right place.
+      </h1>
+    </div>
+
+    <div class="search-bar">
+      <div class="options">
+        <h6 class="mr-5 active">APPOINTMENTS</h6>
+        <h6 class="mr-5">CLASSES</h6>
+        <h6>ONLINE</h6>
+      </div>
+
+      <div class="search row">
+        <div class="col-lg-4 col-md-12 d-flex align-items-center justify-start">
+          <img
+            src="assets/img/search-green.svg"
+            alt="search"
+            class="input-icon"
+          />
+          <input
+            class="w-100"
+            type="text"
+            placeholder="Search for a service, provider or symptom"
+          />
+          <span class="bb-right"></span>
+        </div>
+        <div class="col-lg-3 col-md-12 d-flex align-items-center justify-start">
+          <img src="assets/img/location.svg" alt="search" class="input-icon" />
+          <input type="text" placeholder="Select a location" />
+          <span class="bb-right"></span>
+        </div>
+        <div class="col-lg-3 col-md-12 d-flex align-items-center justify-start">
+          <img src="assets/img/calendar.svg" alt="search" class="input-icon" />
+          <input type="text" placeholder="When do you want to go?" />
+        </div>
+        <div class="col-lg-2 col-md-12">
+          <button class="cta-btn discover-btn">Discover</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flex-box discover-section">
+  <h2 class="font-recoleta text-white">Discover wellbeing services near you</h2>
+  <p class="font-avenir text-white mt-3 mb-5">
+    Displaying nearby wellbeing for <span>Hawthorn </span>
+  </p>
+
+  <div class="container-fluid" style="overflow: hidden; position: relative">
+    <div class="myCarousal__overlay"></div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner d-flex mx-auto">
+        <div class="carousel-item col-md-3 p-0 mr-3 active">
+          <div class="card">
+            <div class="row m-0">
+              <div class="col-4 p-0">
+                <img
+                  class="card-img-top img-fluid"
+                  [src]="services[0].srcImage"
+                />
+              </div>
+              <div class="col-8 clinic-details">
+                <div>
+                  <p>{{ services[0].clinicName }}</p>
+                  <p>{{ services[0].spaceName }}</p>
+                  <p>{{ services[0].rating }} stars</p>
+                </div>
+                <div>
+                  <!-- heart icon -->
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="d-flex justify-content-between card-details mt-2"
+              style="border-bottom: 1px solid #095d59"
+            >
+              <p>{{ services[0].serviceName }}</p>
+              <p>{{ services[0].charge }}</p>
+            </div>
+
+            <div class="d-flex justify-content-between card-details mt-2">
+              <p>{{ services[0].availableDate }}</p>
+              <p>Show all times</p>
+            </div>
+
+            <div class="d-flex justify-content-between mt-2">
+              <div
+                class="chip"
+                *ngFor="let time of services[0].appointmentSlots"
+              >
+                {{ time }}
+              </div>
+              <div class="chip">+29 more</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item col-md-3 p-0 mr-3">
+          <div class="card">
+            <div class="row m-0">
+              <div class="col-4 p-0">
+                <img
+                  class="card-img-top img-fluid"
+                  [src]="services[1].srcImage"
+                />
+              </div>
+              <div class="col-8 clinic-details">
+                <div>
+                  <p>{{ services[1].clinicName }}</p>
+                  <p>{{ services[1].spaceName }}</p>
+                  <p>{{ services[1].rating }} stars</p>
+                </div>
+                <div>
+                  <!-- heart icon -->
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="d-flex justify-content-between card-details mt-2"
+              style="border-bottom: 1px solid #095d59"
+            >
+              <p>{{ services[1].serviceName }}</p>
+              <p>{{ services[1].charge }}</p>
+            </div>
+
+            <div class="d-flex justify-content-between card-details mt-2">
+              <p>{{ services[1].availableDate }}</p>
+              <p>Show all times</p>
+            </div>
+
+            <div class="d-flex justify-content-between mt-2">
+              <div
+                class="chip"
+                *ngFor="let time of services[1].appointmentSlots"
+              >
+                {{ time }}
+              </div>
+              <div class="chip">+29 more</div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item col-md-3 p-0 mr-3">
+          <div class="card">
+            <div class="row m-0">
+              <div class="col-4 p-0">
+                <img
+                  class="card-img-top img-fluid"
+                  [src]="services[2].srcImage"
+                />
+              </div>
+              <div class="col-8 clinic-details">
+                <div>
+                  <p>{{ services[2].clinicName }}</p>
+                  <p>{{ services[2].spaceName }}</p>
+                  <p>{{ services[2].rating }} stars</p>
+                </div>
+                <div>
+                  <!-- heart icon -->
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="d-flex justify-content-between card-details mt-2"
+              style="border-bottom: 1px solid #095d59"
+            >
+              <p>{{ services[2].serviceName }}</p>
+              <p>{{ services[2].charge }}</p>
+            </div>
+
+            <div class="d-flex justify-content-between card-details mt-2">
+              <p>{{ services[2].availableDate }}</p>
+              <p>Show all times</p>
+            </div>
+
+            <div class="d-flex justify-content-between mt-2">
+              <div
+                class="chip"
+                *ngFor="let time of services[2].appointmentSlots"
+              >
+                {{ time }}
+              </div>
+              <div class="chip">+29 more</div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item col-md-3 p-0 mr-3">
+          <div class="card">
+            <div class="row m-0">
+              <div class="col-4 p-0">
+                <img
+                  class="card-img-top img-fluid"
+                  [src]="services[3].srcImage"
+                />
+              </div>
+              <div class="col-8 clinic-details">
+                <div>
+                  <p>{{ services[3].clinicName }}</p>
+                  <p>{{ services[3].spaceName }}</p>
+                  <p>{{ services[3].rating }} stars</p>
+                </div>
+                <div>
+                  <!-- heart icon -->
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="d-flex justify-content-between card-details mt-2"
+              style="border-bottom: 1px solid #095d59"
+            >
+              <p>{{ services[3].serviceName }}</p>
+              <p>{{ services[3].charge }}</p>
+            </div>
+
+            <div class="d-flex justify-content-between card-details mt-2">
+              <p>{{ services[3].availableDate }}</p>
+              <p>Show all times</p>
+            </div>
+
+            <div class="d-flex justify-content-between mt-2">
+              <div
+                class="chip"
+                *ngFor="let time of services[3].appointmentSlots"
+              >
+                {{ time }}
+              </div>
+              <div class="chip">+29 more</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <a
+        class="carousel-control-prev"
+        href="#myCarousel"
+        role="button"
+        data-slide="prev"
+        style="left: -40px"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#myCarousel"
+        role="button"
+        data-slide="next"
+        style="right: -40px"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a> -->
+    </div>
+  </div>
+
+  <div class="mt-5 mb-5">
+    <button class="cta-btn">FIND MORE WELLBEING NEARBY</button>
+  </div>
+</section>

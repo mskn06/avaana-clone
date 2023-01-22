@@ -1,1 +1,1 @@
-# avaana-clone
+# Avaana Landing Page Clone
